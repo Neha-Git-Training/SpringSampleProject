@@ -11,6 +11,7 @@ node{
     sh label: '', script: 'pwd'
     dir("${WORKSPACE}/target"){
       sh "pwd"
+      sh label: '', script: 'ls'
     }
   }
 }
