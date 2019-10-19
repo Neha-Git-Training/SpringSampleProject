@@ -8,7 +8,7 @@ node{
     def mvnHome = tool name: 'maven_home', type: 'maven'
     sh "${mvnHome}/bin/mvn package"
 
-
+  }
       
       stage('build docker image'){
           dir("${WORKSPACE}/target"){
@@ -21,5 +21,5 @@ node{
       
     
     
-  }
+  
 }
