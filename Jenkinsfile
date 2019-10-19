@@ -11,12 +11,12 @@ node{
   }
       
       stage('build docker image'){
-          dir("${WORKSPACE}/target"){
-          sh "pwd"
-          sh label: '', script: 'ls'
+          //dir("${WORKSPACE}/target"){
+         // sh "pwd"
+          //sh label: '', script: 'ls'
             
           sh "docker build -t springbootsample-image ." 
-            }
+         //   }
       }
       
     
