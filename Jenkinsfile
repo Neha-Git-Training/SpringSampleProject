@@ -7,17 +7,19 @@ node{
     //get mav home path
     def mvnHome = tool name: 'maven_home', type: 'maven'
     sh "${mvnHome}/bin/mvn package"
-    sh 'cd $WORKSPACE/target'
-    sh label: '', script: 'pwd'
-    dir("${WORKSPACE}/target"){
-      sh "pwd"
-      sh label: '', script: 'ls'
+
+
       
       stage('build docker image'){
-        sh 'echo hello'
+          dir("${WORKSPACE}/target"){
+          sh "pwd"
+          sh label: '', script: 'ls'
+            
+          sh "docker build -t SpringSample" .
+            }
       }
       
-    }
+    
     
   }
 }
