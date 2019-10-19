@@ -15,7 +15,7 @@ node{
           sh "pwd"
           sh label: '', script: 'ls'
             
-          sh "docker build -t SpringSample" .
+          sh "docker build -t SpringSample ." 
             }
       }
       
