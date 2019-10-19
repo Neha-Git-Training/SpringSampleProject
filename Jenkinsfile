@@ -12,7 +12,7 @@ node{
       
   stage('build docker image -push'){
      // sh "sudo docker build -t springbootsample-image ." 
-      sh "sudo docker login"
+      sh "sudo docker login docker.io"
       sh "sudo docker build -t nehayadav12/springbootsample12:sampleimage ." 
       sh "sudo docker push nehayadav12/springbootsample12:sampleimage" 
   }
