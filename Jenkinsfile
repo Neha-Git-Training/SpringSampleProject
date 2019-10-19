@@ -15,7 +15,7 @@ node{
          // sh "pwd"
           //sh label: '', script: 'ls'
             
-          sh "docker build -t springbootsample-image ." 
+          sh "sudo docker build -t springbootsample-image ." 
          //   }
       }
       
