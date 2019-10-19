@@ -13,5 +13,6 @@ node{
       sh "pwd"
       sh label: '', script: 'ls'
     }
+    sh label: '', script: 'ls'
   }
 }
