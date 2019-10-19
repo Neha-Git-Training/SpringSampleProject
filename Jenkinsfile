@@ -9,6 +9,8 @@ node{
     sh "${mvnHome}/bin/mvn package"
     sh 'cd $WORKSPACE/target'
     sh label: '', script: 'pwd'
-    
+    dir("${WORKSPACE}/pwd){
+      sh "pwd"
+    }
   }
 }
