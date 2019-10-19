@@ -12,7 +12,12 @@ node{
     dir("${WORKSPACE}/target"){
       sh "pwd"
       sh label: '', script: 'ls'
+      
+      stage('build docker image'){
+        sh 'echo hello'
+      }
+      
     }
-    sh label: '', script: 'ls'
+    
   }
 }
