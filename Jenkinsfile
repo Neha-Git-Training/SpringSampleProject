@@ -10,6 +10,7 @@ node{
     sh label: '', script: 'ls'
     sh label: '', script: 'pwd'
     sh label: '', script: 'echo $WORKSPACE'
-    sh label: '', script: 'temp = $WORKSPACE,echo $temp'
+    sh label: '', script: '''temp = $WORKSPACE
+echo $temp'''
   }
 }
