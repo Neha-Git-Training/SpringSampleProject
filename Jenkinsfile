@@ -7,5 +7,6 @@ node{
     //get mav home path
     def mvnHome = tool name: 'maven_home', type: 'maven'
     sh "${mvnHome}/bin/mvn package"
+    sh label: '', script: 'ls, pwd'
   }
 }
