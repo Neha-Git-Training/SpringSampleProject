@@ -10,16 +10,9 @@ node{
 
   }
       
-      stage('build docker image'){
-          //dir("${WORKSPACE}/target"){
-         // sh "pwd"
-          //sh label: '', script: 'ls'
-            
-          sh "sudo docker build -t springbootsample-image ." 
-         //   }
-      }
-      
-    
-    
-  
+  stage('build docker image -push'){
+     // sh "sudo docker build -t springbootsample-image ." 
+      sh "sudo docker build -t nehayadav12/springbootsample12:sampleimage ." 
+      sh "sudo docker push nehayadav12/springbootsample12:sampleimage" 
+  }
 }
