@@ -9,5 +9,6 @@ node{
     sh "${mvnHome}/bin/mvn package"
     sh label: '', script: 'ls'
     sh label: '', script: 'pwd'
+    sh label: '', script: 'echo $WORKSPACE'
   }
 }
